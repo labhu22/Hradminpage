@@ -29,8 +29,6 @@ public class VerfiyLoginPage {
 
 		System.out.println("============Test case Passed============");
 
-
-	
 	}
 
 }
