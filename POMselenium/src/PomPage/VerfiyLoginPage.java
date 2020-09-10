@@ -27,7 +27,7 @@ public class VerfiyLoginPage {
 		driver.findElement(By.id("pass")).sendKeys("pujamishra");
 		driver.findElement(By.name("login")).click();
 
-		System.out.println("============Test case Passed============");
+		System.out.println("============Test case Passed excecuting ============");
 
 	}
 
