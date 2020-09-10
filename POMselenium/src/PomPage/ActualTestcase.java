@@ -7,23 +7,24 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class sleintest {
+public class ActualTestcase {
 
 
 	WebDriver driver;
 
 	@Test
-	public void verifyLoginPage( ) throws InterruptedException{
+	public void verifyLoginPage( ) throws Exception{
 
-		// this url launch browser and specified url
-		//WebDriver driver=BrowserFactory.startBrowser("chrome", "http://182.74.238.221/clarion_promise_qa/home.php");
-
+		
+		driver=BrowserFactory.startApplication(driver,"chrome");
+		System.out.println(driver.getTitle());
+		
 		//Created Page Object using Page Factory 
 		LoginPageNew Login_page= PageFactory.initElements(driver, LoginPageNew.class);
 
 		//call the method
 
-		Login_page.Login_page("singhaniyaraaz56@gmail.com", "pujamishra");
+		Login_page.Login_page("sanjeetk@clariontechnologies.co.in", "clarion");
 
 		//Click on Log Promise Link
 		driver.findElement(By.xpath("//a[contains(text(),'Log Promise')]")).click();
@@ -38,7 +39,7 @@ public class sleintest {
 		Thread.sleep(1000);
 
 
-		driver.findElement(By.id("txtPromise")).sendKeys("Promise test by priyanka selenium12345");
+		driver.findElement(By.id("txtPromise")).sendKeys("Promise test by priyanka selenium code12");
 
 		// Click on Log Promise button
 
@@ -63,9 +64,9 @@ public class sleintest {
 		driver.findElement(By.name("btnSearch")).click();
 
 		
-		actual_error= driver.findElement(By.xpath("/html/body/table/tbody/tr[6]/td/table/tbody/tr[6]/td/table/tbody/tr/td/table/tbody/tr[3]/td[3]")).getAttribute("innerHTML");
+		actual_error= driver.findElement(By.xpath("/html/body/table/tbody/tr[6]/td/table/tbody/tr[6]/td/table/tbody/tr/td/table/tbody/tr[2]/td[3]/b")).getAttribute("innerHTML");
 		System.out.println(actual_error);
-		expected_error="Promise test by priyanka selenium12345";		
+		expected_error="Promise";		
 		Assert.assertEquals(actual_error,expected_error);
 		Thread.sleep(2000);
 

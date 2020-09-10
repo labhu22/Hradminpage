@@ -6,8 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class LoginPageNew {
-	
-	WebDriver driver;
+WebDriver driver;
 	
 	public LoginPageNew(WebDriver driver) {
 	
@@ -15,16 +14,16 @@ public class LoginPageNew {
 	
 }
 
-	@FindBy(name="email") 
+	@FindBy(name="txtUsername") 
 	
 	WebElement username;
 	
-    @FindBy(how=How.ID,using ="pass") 
+    @FindBy(how=How.NAME,using ="txtPassword") 
 	
 	WebElement Password;
     
     
-    @FindBy(how=How.NAME,using ="login") 
+    @FindBy(how=How.NAME,using ="submit1") 
 
 	WebElement ClickButton;
 
@@ -37,4 +36,3 @@ public class LoginPageNew {
 	}
 	
 }
-
