@@ -56,7 +56,7 @@ public class ActualTestcase {
 		promisor.selectByVisibleText("-- All Promisors --");
 		promisor.selectByValue("4FD8CA8F7257FFE0BF0D13098D160895");
 
-		System.out.println("============course creater selected=============");
+		System.out.println("============promisor  selected=============");
 		Thread.sleep(1000);
 
 		
