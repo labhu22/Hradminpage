@@ -1,4 +1,4 @@
-package PomPage;
+package com.POM.page;
 
 import java.util.concurrent.TimeUnit;
 
